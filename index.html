@@ -4,50 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Neurolux Duo FL-41 | Therapeutic Glasses for Light Sensitivity</title>
-
-    <!-- SEO META TAGS -->
-    <meta name="description" content="Neurolux Duo FL‑41 therapeutic glasses feature dual tint levels that deliver clinically proven relief from migraines, photophobia, and light sensitivity both indoors and outdoors.">
-    <meta name="keywords" content="FL-41 glasses, migraine glasses, photophobia relief, light sensitivity glasses, Neurolux Duo, blue light blocking eyewear, therapeutic eyewear">
-    <link rel="canonical" href="https://www.neurolux.com/duo-fl41">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="product">
-    <meta property="og:title" content="Neurolux Duo FL‑41 Glasses – Indoor & Outdoor Relief for Light Sensitivity">
-    <meta property="og:description" content="Dual indoor/outdoor FL‑41 tint blocks migraine‑trigger wavelengths and reduces photophobia.">
-    <meta property="og:url" content="https://www.neurolux.com/duo-fl41">
-    <meta property="og:image" content="https://www.neurolux.com/assets/neurolux-duo-og.jpg">
-    <meta property="og:site_name" content="Neurolux Therapeutics">
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Neurolux Duo FL‑41 Glasses">
-    <meta name="twitter:description" content="Clinically validated dual‑tint FL‑41 eyewear for migraine & photophobia relief.">
-    <meta name="twitter:image" content="https://www.neurolux.com/assets/neurolux-duo-og.jpg">
-
-    <!-- Theme color for mobile browsers -->
-    <meta name="theme-color" content="#5a2d82">
-
-    <!-- Structured Data: Product schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org/",
-      "@type": "Product",
-      "name": "Neurolux Duo FL-41 Glasses",
-      "image": [
-        "https://www.neurolux.com/assets/neurolux-duo-og.jpg"
-      ],
-      "description": "Neurolux Duo FL‑41 glasses provide two specialized tint levels that filter migraine‑triggering blue‑green waves indoors and outdoors, reducing light sensitivity by up to 74%.",
-      "sku": "NLX-DUO-FL41",
-      "brand": {
-        "@type": "Brand",
-        "name": "Neurolux"
-      },
-    }
-    </script>
-
-    <!-- FontAwesome & Stylesheets -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
     <style>
         :root {
             --primary-purple: #5a2d82;
@@ -101,6 +58,7 @@
         .logo {
             display: flex;
             align-items: center;
+            z-index: 101;
         }
         
         .logo-text {
@@ -133,6 +91,7 @@
         .nav-links {
             display: flex;
             list-style: none;
+            transition: var(--transition);
         }
         
         .nav-links li {
@@ -166,6 +125,21 @@
         
         .nav-links a:hover::after {
             width: 100%;
+        }
+        
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            z-index: 101;
+        }
+        
+        .hamburger div {
+            width: 25px;
+            height: 3px;
+            background-color: var(--primary-purple);
+            margin: 5px;
+            transition: var(--transition);
         }
         
         /* Hero Section */
@@ -420,6 +394,205 @@
             font-weight: bold;
         }
         
+        /* Genuine FL-41 Section */
+        .genuine-section {
+            background-color: var(--white);
+            padding: 80px 0;
+        }
+        
+        .genuine-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: linear-gradient(to right, rgba(255,255,255,0.9), rgba(255,255,255,0.9)), 
+                        url('https://images.unsplash.com/photo-1581591524425-c7e0978865fc?q=80&w=2070') no-repeat center center;
+            background-size: cover;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            position: relative;
+            padding: 50px;
+        }
+        
+        .genuine-content::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255,255,255,0.95);
+            z-index: 1;
+        }
+        
+        .genuine-content > * {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .genuine-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .genuine-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary-purple);
+            margin-bottom: 15px;
+        }
+        
+        .genuine-title p {
+            font-size: 1.3rem;
+            color: var(--secondary-purple);
+            font-style: italic;
+        }
+        
+        .genuine-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        
+        @media (max-width: 992px) {
+            .genuine-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .grid-header {
+            font-weight: 700;
+            padding: 15px;
+            text-align: center;
+            background: var(--primary-purple);
+            color: white;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .grid-item {
+            background: var(--light-gray);
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .grid-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+        }
+        
+        .grid-item h3 {
+            color: var(--primary-purple);
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+        
+        .grid-item p {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        
+        .myth-busting {
+            background: linear-gradient(to right, var(--primary-purple), var(--secondary-purple));
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 40px 0;
+            box-shadow: 0 8px 25px rgba(90, 45, 130, 0.3);
+        }
+        
+        .myth-busting h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .myth-busting h3 i {
+            margin-right: 15px;
+            color: var(--light-purple);
+        }
+        
+        .myth-busting-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            align-items: center;
+        }
+        
+        @media (max-width: 768px) {
+            .myth-busting-content {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .myth, .reality {
+            padding: 20px;
+            border-radius: 8px;
+        }
+        
+        .myth {
+            background: rgba(255,255,255,0.15);
+            border-left: 4px solid #ff6b6b;
+        }
+        
+        .reality {
+            background: rgba(255,255,255,0.15);
+            border-left: 4px solid var(--accent-teal);
+        }
+        
+        .myth h4, .reality h4 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .myth h4 i, .reality h4 i {
+            margin-right: 10px;
+        }
+        
+        .call-to-action {
+            text-align: center;
+            padding: 30px;
+            background: var(--light-gray);
+            border-radius: 10px;
+            margin-top: 40px;
+        }
+        
+        .call-to-action h3 {
+            font-size: 1.8rem;
+            color: var(--primary-purple);
+            margin-bottom: 20px;
+        }
+        
+        .call-to-action p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .btn-large {
+            padding: 18px 45px;
+            font-size: 1.2rem;
+            background: linear-gradient(135deg, var(--accent-teal), #16a085);
+        }
+        
+        .certified-badge {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 10px 25px;
+            background: var(--primary-purple);
+            color: white;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        
         /* Testimonials */
         .testimonials {
             background: linear-gradient(135deg, var(--primary-purple), var(--secondary-purple));
@@ -572,23 +745,41 @@
         }
         
         /* Responsive Design */
-        @media (max-width: 768px) {
-            .header-container {
+        @media (max-width: 992px) {
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: 0;
+                height: 100vh;
+                width: 300px;
+                background: var(--white);
                 flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                transform: translateX(100%);
+                box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+                z-index: 100;
             }
             
-            .nav-links {
-                margin-top: 20px;
-                flex-wrap: wrap;
-                justify-content: center;
+            .nav-links.active {
+                transform: translateX(0);
             }
             
             .nav-links li {
-                margin: 10px 15px;
+                margin: 20px 0;
+            }
+            
+            .nav-links a {
+                font-size: 1.3rem;
+                color: var(--primary-purple);
+            }
+            
+            .hamburger {
+                display: block;
             }
             
             .hero h2 {
-                font-size: 2.2rem;
+                font-size: 2.5rem;
             }
             
             .hero p {
@@ -618,6 +809,41 @@
                 align-items: center;
             }
         }
+        
+        @media (max-width: 768px) {
+            .hero {
+                padding: 80px 0;
+            }
+            
+            .hero h2 {
+                font-size: 2.2rem;
+            }
+            
+            .logo-main {
+                font-size: 1.8rem;
+            }
+            
+            .logo-sub {
+                font-size: 0.9rem;
+            }
+            
+            .genuine-content {
+                padding: 30px 20px;
+            }
+        }
+        
+        /* Hamburger Animation */
+        .hamburger.active div:nth-child(1) {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+        
+        .hamburger.active div:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .hamburger.active div:nth-child(3) {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
     </style>
 </head>
 <body>
@@ -630,10 +856,18 @@
                     <div class="logo-sub">FL-41 GLASSES</div>
                 </div>
             </div>
-            <ul class="nav-links">
+            
+            <div class="hamburger" id="hamburger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            
+            <ul class="nav-links" id="nav-links">
                 <li><a href="#benefits">Benefits</a></li>
                 <li><a href="#duo-feature">Duo Technology</a></li>
                 <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#genuine">Genuine FL-41</a></li>
                 <li><a href="#testimonials">Testimonials</a></li>
                 <li><a href="#for-practitioners">For Practitioners</a></li>
             </ul>
@@ -646,7 +880,7 @@
             <h2>Revolutionary Relief for Light Sensitivity</h2>
             <p>Neurolux Duo FL-41 glasses provide clinically-proven protection with two specialized tint levels for comprehensive photophobia management</p>
             <div class="hero-buttons">
-                <a href="#for-practitioners" class="btn">Information for Practitioners</a>
+                <a href="#for-practitioners" class="btn">Request a free professional sample kit</a>
             </div>
         </div>
     </section>
@@ -686,7 +920,6 @@
                     <h3>Digital Eye Strain Reduction</h3>
                     <p>Protects against blue light from screens while maintaining color perception for daily activities.</p>
                 </div>
-                <!-- New Benefit Boxes -->
                 <div class="benefit-card">
                     <div class="benefit-icon">
                         <i class="fas fa-eye-shield"></i>
@@ -789,6 +1022,100 @@
         </div>
     </section>
 
+    <!-- Genuine FL-41 Section -->
+    <section id="genuine" class="genuine-section">
+        <div class="container">
+            <div class="genuine-content">
+                <div class="genuine-title">
+                    <h2>Why Genuine FL-41 Is in a League of Its Own</h2>
+                    <p>(and why a "rose-tint look-alike" just isn't the same)</p>
+                </div>
+                
+                <div class="genuine-grid">
+                    <div class="grid-header">What it is</div>
+                    <div class="grid-header">Why it matters</div>
+                    <div class="grid-header">Proof we provide</div>
+                    
+                    <div class="grid-item">
+                        <h3>Targeted 480–540 nm "notch" filter</h3>
+                        <p>Calms melanopsin-triggered discomfort without dimming the whole world</p>
+                    </div>
+                    <div class="grid-item">
+                        <h3>Clinically validated</h3>
+                        <p>↓ blink rate, ↓ light-evoked pain, ↑ reading comfort</p>
+                    </div>
+                    <div class="grid-item">
+                        <h3>True BPI dye lot</h3>
+                        <p>Never "rose-ish" knock-offs</p>
+                    </div>
+                    
+                    <div class="grid-item">
+                        <h3>Minimal colour distortion</h3>
+                        <p>Skin tones, dashboards, medical charts stay natural</p>
+                    </div>
+                    <div class="grid-item">
+                        <h3>Locked-down SOP + double QC</h3>
+                        <p>Repeatability keeps you—and your patients—confident</p>
+                    </div>
+                    <div class="grid-item">
+                        <h3>COLTS spectrophotometer report</h3>
+                        <p>Ships with every order</p>
+                    </div>
+                    
+                    <div class="grid-item">
+                        <h3>Real-world symptom relief</h3>
+                        <p>Shown in peer-reviewed trials</p>
+                    </div>
+                    <div class="grid-item">
+                        <h3>Colour looks similar, but efficacy lives in the curve shape</h3>
+                        <p>It's the precision that makes the difference</p>
+                    </div>
+                    <div class="grid-item">
+                        <h3>Batch-number traceability</h3>
+                        <p>Direct to Brain Power Inc.</p>
+                    </div>
+                    
+                    <div class="grid-item">
+                        <h3>Side-by-side demo lens set</h3>
+                        <p>Available on request to see the difference</p>
+                    </div>
+                    <div class="grid-item">
+                        <h3>Audit log & temperature-controlled tint baths</h3>
+                        <p>Ensuring consistent quality</p>
+                    </div>
+                    <div class="grid-item">
+                        <h3>PubMed IDs & QR code</h3>
+                        <p>On our hand-out for immediate verification</p>
+                    </div>
+                </div>
+                
+                <div class="myth-busting">
+                    <h3><i class="fas fa-comment-slash"></i> Busting the Top Myth</h3>
+                    <div class="myth-busting-content">
+                        <div class="myth">
+                            <h4><i class="fas fa-times-circle"></i> Myth</h4>
+                            <p>"Any rose lens blocks blue, so it's good enough."</p>
+                        </div>
+                        <div class="reality">
+                            <h4><i class="fas fa-check-circle"></i> Reality</h4>
+                            <p>A blunt 610 nm cut-off wipes out soothing mid-greens and blues—leaving harsh sepia vision and no proven migraine benefit.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="call-to-action">
+                    <h3>Clinician Call-to-Action</h3>
+                    <p>Ready to see the difference genuine FL-41 technology makes for your patients?</p>
+                    <a href="#for-practitioners" class="btn btn-large">Request Your Complimentary Certified FL-41 Demo Kit</a>
+                    <div class="certified-badge">Includes COLTS report + quick-start guide</div>
+                    <div style="margin-top: 20px; font-size: 1.2rem; font-weight: 600; color: var(--primary-purple);">
+                        <p>Looks rose. Works FL-41. Accept no substitutes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Testimonials -->
     <section id="testimonials" class="testimonials">
         <div class="container">
@@ -868,7 +1195,7 @@
                     </div>
                 </div>
             </div>
-            <a href="#contact" class="btn">Request Practitioner Information Kit</a>
+            <a href="#contact" class="btn">Request a free professional sample kit</a>
         </div>
     </section>
 
@@ -894,6 +1221,7 @@
                         <li><a href="#benefits">Clinical Benefits</a></li>
                         <li><a href="#duo-feature">Duo Technology</a></li>
                         <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#genuine">Genuine FL-41</a></li>
                         <li><a href="#for-practitioners">For Practitioners</a></li>
                     </ul>
                 </div>
@@ -918,13 +1246,30 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Neurolux Therapeutics. All rights reserved. This information is intended for healthcare practitioners only.</p>
+                <p>&copy; 2023 Neurolux Therapeutics. All rights reserved. This information is intended for healthcare practitioners only.</p>
                 <p>FL-41 is a registered trademark. Clinical results may vary.</p>
             </div>
         </div>
     </footer>
 
     <script>
+        // Hamburger Menu Toggle
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+        
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+        
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                hamburger.classList.remove('active');
+            });
+        });
+        
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -951,7 +1296,7 @@
             });
         }, observerOptions);
         
-        document.querySelectorAll('.benefit-card, .step, .testimonial-card, .tint-level').forEach(el => {
+        document.querySelectorAll('.benefit-card, .step, .testimonial-card, .tint-level, .grid-item').forEach(el => {
             observer.observe(el);
         });
     </script>
